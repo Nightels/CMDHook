@@ -872,8 +872,8 @@ Partial Class Hook
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(298, 31)
         Me.Label13.TabIndex = 4
-        Me.Label13.Text = "Paste location of the text file. If it is can't found in destination PC, we can m" &
-    "ake it and write all log to it. "
+        Me.Label13.Text = "Paste location of the text file. The script can copy the text file from temprary " &
+    "log file."
         '
         'Label14
         '

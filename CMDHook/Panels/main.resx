@@ -120,18 +120,15 @@
   <metadata name="tool_tip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>5, 4</value>
   </metadata>
-  <data name="text_label.Text" xml:space="preserve">
-    <value>Tutorial: Please select minimum one script, and select the save method. 
-If you can click to the setting icon next to the script, this panel shows up the options! If you dont know what script does, just move your cursor to the script name! If you click to the checkbox, it's just toggle on or off.</value>
-  </data>
-  <metadata name="tool_tip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>5, 4</value>
-  </metadata>
   <data name="PictureBox8.ToolTip" xml:space="preserve">
     <value>The shortest password allowed with WPA2 is 8 characters long.
 A password of 14 or 15 characters should be long enough to defeat most brute force guessing.
 The German government recommends 20 characters as a minimum.
 WPA2 passwords can be up to 63 characters long.</value>
+  </data>
+  <data name="text_label.Text" xml:space="preserve">
+    <value>Tutorial: Please select minimum one script, and select the save method. 
+If you can click to the setting icon next to the script, this panel shows up the options! If you dont know what script does, just move your cursor to the script name! If you click to the checkbox, it's just toggle on or off.</value>
   </data>
   <metadata name="scripts.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>86, 5</value>

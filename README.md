@@ -33,7 +33,7 @@ When the last script ran, the cmd copy the log file into the dictionary which I 
 
 ## Important: 
 Its a pre-release, just only the 'Save to computer' save method works. 
-Just use in you computer, for testing, or if you has permission for it.
+Just use in you computer.
 
 Contact:
 - [Telegram](https://t.me/nightels)

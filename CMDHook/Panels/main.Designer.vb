@@ -98,6 +98,7 @@ Partial Class Hook
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox3.SuspendLayout()
         Me.downrunpanel.SuspendLayout()
         Me.hotspot_panel.SuspendLayout()
@@ -793,6 +794,7 @@ Partial Class Hook
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
@@ -816,9 +818,9 @@ Partial Class Hook
         '
         Me.Button1.Enabled = False
         Me.Button1.ForeColor = System.Drawing.Color.Navy
-        Me.Button1.Location = New System.Drawing.Point(9, 23)
+        Me.Button1.Location = New System.Drawing.Point(120, 23)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(437, 23)
+        Me.Button1.Size = New System.Drawing.Size(326, 23)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Create Payload! (.bat)"
         Me.tool_tip.SetToolTip(Me.Button1, "Please select save method! If you edited code, and you set save method manually, " &
@@ -891,6 +893,16 @@ Partial Class Hook
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(297, 20)
         Me.TextBox10.TabIndex = 0
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Enabled = False
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(8, 24)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(106, 21)
+        Me.ComboBox1.TabIndex = 2
+        Me.ComboBox1.Text = "Select flashdrive"
         '
         'Hook
         '
@@ -1017,4 +1029,5 @@ Partial Class Hook
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label15 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

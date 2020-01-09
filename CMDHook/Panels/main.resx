@@ -120,6 +120,9 @@
   <metadata name="tool_tip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>5, 4</value>
   </metadata>
+  <metadata name="tool_tip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>5, 4</value>
+  </metadata>
   <data name="PictureBox8.ToolTip" xml:space="preserve">
     <value>The shortest password allowed with WPA2 is 8 characters long.
 A password of 14 or 15 characters should be long enough to defeat most brute force guessing.

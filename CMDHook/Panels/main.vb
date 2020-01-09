@@ -15,6 +15,7 @@ Public Class Hook
     Dim downloadexe As String = "   "
     Dim SaveLogTemporary As String = " >> """ & My.Application.Info.DirectoryPath & "\log.txt"""
     Dim DestinationLoc As String
+    Dim scripts_strng As String
 #End Region
 
     Private Sub Hook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -679,6 +680,33 @@ Public Class Hook
             Me.Text = "CMDHook - Paypal: helper4away@gmail.com"
             change = -1
         End If
+
+        'List all of flashdrives connected
+        Dim folder = New FolderBrowserDialog()
+        Dim drives = System.IO.DriveInfo.GetDrives()
+        Dim usbDrive = drives.FirstOrDefault(Function(m) m.DriveType = System.IO.DriveType.Removable)
+
+        For i As Integer = 0 To drives.Count - 1
+
+            If drives(i).DriveType = System.IO.DriveType.Removable Then
+                'Codes will not run if there were no removable device
+                folder.SelectedPath = usbDrive.RootDirectory.FullName
+                If ComboBox1.Items.Contains(folder.SelectedPath) Then
+                    ComboBox1.Enabled = True
+                Else
+                    ComboBox1.Items.Add(folder.SelectedPath)
+                End If
+            End If
+
+        Next i
+
+        'Enable button for save
+        Select Case scripts_strng
+        '1,2,4,5,6,7,8,10,11,15
+            Case "1"
+                scripts_strng = "CheckBox1"
+
+        End Select
     End Sub
 
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
@@ -687,5 +715,9 @@ Public Class Hook
 
     Private Sub TextBox10_TextChanged(sender As Object, e As EventArgs) Handles TextBox10.TextChanged
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' save to pendrive
     End Sub
 End Class
